@@ -34,3 +34,8 @@ WHERE `name` LIKE 'Corso di Laurea Magistrale%';
 SELECT COUNT(*) AS `numero_dipartimenti` 
 FROM `departments`;
 
+//8.
+SELECT *
+FROM `teachers`
+WHERE `phone` IS NULL;
+
