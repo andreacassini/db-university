@@ -1,3 +1,5 @@
+GROUP BY
+
 1. Contare quanti iscritti ci sono stati ogni anno
 SELECT COUNT(*) AS 'students', YEAR(`enrolment_date`) AS `enrolment_date`
 FROM `students` 
@@ -18,5 +20,12 @@ SELECT COUNT(*) AS 'corsi di laurea', `department_id`
 FROM `degrees` 
 GROUP BY `department_id`
 
+JOIN
+
+1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT * 
+FROM `students` 
+JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia'
 
 
